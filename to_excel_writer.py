@@ -2,7 +2,8 @@ import xlsxwriter as xl
 from parser_url import array
 
 def writer(parametr):
-    book = xl.Workbook(r'C:\Dev\data.xlsx')
+    """Функция записи в excel файл."""
+    book = xl.Workbook('C:\\Dev\\data.xlsx') #Не забудь указать актуальный путь!
     page = book.add_worksheet('Товар')
 
     row = 0
@@ -13,10 +14,8 @@ def writer(parametr):
     page.set_column('D:D', 50)
 
     for item in parametr():
-        page.write(row, column, item[0])
-        page.write(row, column+1, item[1])
-        page.write(row, column+2, item[2])
-        page.write(row, column+3, item[3])
+        for i in range(4):
+            page.write(row, column+i, item[0+i])
         row +=1
 
     book.close()
