@@ -9,7 +9,7 @@ def writer(parametr):
     row = 0
     column = 0
     page.set_column('A:A', 20)
-    page.set_column('B:B', 20)
+    page.set_column('B:B', 10)
     page.set_column('C:C', 50)
     page.set_column('D:D', 50)
 
