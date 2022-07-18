@@ -1,4 +1,3 @@
-from urllib import response
 from wsgiref import headers
 import requests
 from bs4 import BeautifulSoup as BS
